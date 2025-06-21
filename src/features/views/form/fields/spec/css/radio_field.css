@@ -1,0 +1,9 @@
+.p-radiobutton .p-radiobutton-box {
+    width: 1rem;
+    height: 1rem;
+}
+
+.p-radiobutton .p-radiobutton-icon {
+    width: 0.5rem;
+    height: 0.5rem;
+}

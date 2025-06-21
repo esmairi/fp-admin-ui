@@ -1,0 +1,44 @@
+.p-datatable.p-datatable-sm .p-datatable-thead > tr > th,td {
+    font-size: .8rem;
+}
+.p-checkbox .p-checkbox-box {
+    border-radius: 0 !important;
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+    padding: 0 !important;
+}
+
+/* Paginator */
+
+/* Make buttons smaller and flatter */
+.p-paginator .p-paginator-element {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    font-size: 0.8rem;
+    min-width: auto;
+    height: auto;
+}
+
+/* Dropdown adjustments */
+.p-paginator .p-dropdown {
+    font-size: 0.8rem;
+    height: 1.6rem;
+    min-width: 3.5rem;
+    border-radius: 0;
+}
+
+/* Dropdown items */
+.p-dropdown-item {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Paginator dropdown icon */
+.p-dropdown .p-dropdown-trigger {
+    width: 1.2rem;
+}
+
+.p-paginator .p-dropdown .p-dropdown-label {
+    font-size: 0.8rem;
+    line-height: .1rem;
+}

@@ -1,0 +1,17 @@
+/* Compact PrimeReact Dropdown */
+.p-dropdown {
+    font-size: 0.75rem !important;
+    height: 1.8rem !important;
+    min-height: 1.8rem !important;
+    padding: 0 0.4rem !important;
+    border-radius: 0 !important;
+}
+
+.p-dropdown .p-dropdown-label {
+    padding: 0 !important;
+    line-height: 1.8rem !important;
+}
+
+.p-dropdown .p-dropdown-trigger {
+    width: 1.6rem !important;
+}

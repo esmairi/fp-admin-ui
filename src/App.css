@@ -1,0 +1,32 @@
+body {
+  margin: auto;
+  font-family: "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.p-button {
+  border-radius: 0 !important;
+}
+
+:root {
+  --bg-green-900: #6666ff;
+  --bg-btn-save: #26a368;
+  --bg-header-form: #ced7d33d;
+  --bg-btn-cancel: #2421218f;
+  --bg-btn-delete: #ba2121;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}

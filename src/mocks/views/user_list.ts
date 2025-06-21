@@ -1,0 +1,83 @@
+export const userListView = {
+  name: 'user_list',
+  type: 'list',
+  label: 'Users',
+  model: 'user',
+  is_main: true,
+  form_view: 'user_form',
+  fields: [
+    {
+      name: 'firstName',
+      label: 'First Name',
+      type: 'text',
+      value: 'John',
+      help: 'Enter your first name',
+      mode: 'edit',
+    },
+    {
+      name: 'age',
+      label: 'Age',
+      type: 'number',
+      help: 'Enter your age',
+      mode: 'edit',
+    },
+    {
+      name: 'birthDate',
+      label: 'Date of Birth',
+      type: 'date',
+      mode: 'edit',
+    },
+    {
+      name: 'subscribe',
+      label: 'Subscribe to newsletter',
+      type: 'checkbox',
+      help: 'You will receive updates by email',
+      mode: 'edit',
+    },
+    {
+      name: 'gender',
+      label: 'Gender',
+      type: 'radio',
+      options: [
+        { label: 'Male', value: 'male' },
+        { label: 'Female', value: 'female' },
+      ],
+      mode: 'edit',
+    },
+    {
+      name: 'country',
+      label: 'Country',
+      type: 'select',
+      options: [
+        { label: 'France', value: 'fr' },
+        { label: 'Germany', value: 'de' },
+        { label: 'Japan', value: 'jp' },
+      ],
+      help: 'Select your country',
+      mode: 'edit',
+    },
+    {
+      name: 'bio',
+      label: 'Biography',
+      type: 'textarea',
+      mode: 'edit',
+      help: 'Tell us about yourself',
+    },
+    {
+      name: 'email',
+      label: 'Email',
+      value: 'john@example.com',
+      mode: 'view',
+    },
+    {
+      name: 'licenseAccepted',
+      label: 'License Accepted',
+      type: 'checkbox',
+      mode: 'edit',
+      error: {
+        code: 'REQUIRED',
+        message: 'You must accept the license',
+      },
+    },
+  ],
+};
