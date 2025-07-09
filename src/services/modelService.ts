@@ -1,6 +1,6 @@
 import type { RecordData } from '@fastadm/types/ModelInfo.ts';
 
-export const fetchRecords = async (url: string): Promise<RecordData[]> => {
+export const fetchRecords = async (url: string): Promise<RecordData> => {
   const response = await fetch(url);
 
   if (!response.ok) {

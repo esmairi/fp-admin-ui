@@ -20,20 +20,23 @@ const ViewSelector: React.FC<Props> = ({ views, model }) => {
   const [view, setView] = useState<AdminView>();
 
   useEffect(() => {
+    let view;
     if (viewId) {
-      const view = views.find((v) => v.name === viewId);
-      if (view) {
-        setView(view);
-      } else {
+       view = views.find((v) => v.name === viewId);
+      if (!view) {
         throw new Error(`Unknown view: ${viewId}`);
       }
     } else {
       // Load first list view
-      const view = views?.find((v) => v.type === 'list');
-      if (view) {
-        setView(view);
-      }
+       view = views?.find((v) => v.view_type === 'list');
     }
+    if(view){
+      setView(view);
+    }
+  if(!view){
+      throw new Error(`cant load view`)
+    }
+
   }, [model, viewId, views]);
   if (!view) return null;
   const updateView = (view: AdminView) => {
@@ -41,8 +44,8 @@ const ViewSelector: React.FC<Props> = ({ views, model }) => {
     setSearchParams({ view_id: view.name });
   };
 
-  const ViewComponent = ViewLoader.getViewComponent(view.type);
-  if (ViewLoader.isSingleViewer(view.type)) {
+  const ViewComponent = ViewLoader.getViewComponent(view.view_type);
+  if (ViewLoader.isSingleViewer(view.view_type)) {
     return (
       <BaseFormView modelInfo={model} view={view} loaderOptions={{ recordId }}>
         <ViewComponent />
@@ -54,7 +57,7 @@ const ViewSelector: React.FC<Props> = ({ views, model }) => {
       <div style={{ marginBottom: '1rem' }}>
         {views.map((v) => (
           <button onClick={() => updateView(v)} key={v.name}>
-            {v.type}
+            {v.view_type}
           </button>
         ))}
       </div>
