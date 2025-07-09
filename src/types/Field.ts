@@ -1,15 +1,17 @@
 export interface Field {
   name: string;
-  label: string;
+  title: string;
   value?: any;
-  type:
+  field_type:
     | 'text'
     | 'number'
     | 'date'
-    | 'checkbox'
-    | 'radio'
-    | 'select'
+    | 'boolean'
     | 'textarea';
+  widget:
+      | 'checkbox'
+      | 'radio'
+      | 'select';
   mode?: 'view' | 'edit';
   help?: string;
   error?: { code: string; message: string };

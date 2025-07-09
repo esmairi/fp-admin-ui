@@ -20,7 +20,7 @@ function AppRow(props: { model: ModelInfo; AppName: string }) {
     model: string,
     defaultView: string
   ): string => {
-    return `/admin/${app}/${model}?view_id=${defaultView}`;
+    return `/admin/${app}/${model}?view_id=${defaultView || ''}`;
   };
 
   return (

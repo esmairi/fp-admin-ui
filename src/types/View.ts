@@ -6,7 +6,7 @@ export interface AdminView {
   name: string;
   label: string;
   model: string;
-  type: string;
+  view_type: string;
   is_main: boolean;
   fields: Field[];
   form_view: string;

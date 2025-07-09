@@ -10,7 +10,7 @@ export interface ListLoaderOptions {
 }
 
 export type BaseViewListContextType = BaseViewContextType & {
-  records: RecordData[];
+  records: RecordData;
   loaderOptions: ListLoaderOptions;
   onRowClick?: (id: string) => void;
 };

@@ -22,8 +22,10 @@ export const BaseListView: React.FC<ViewRecordProps> = ({
   loaderOptions,
   children,
 }) => {
-  const { records, isFetching, error } = useRecordsLoader(modelInfo);
-  const navigate = useNavigate();
+
+    const { records, isFetching, error } = useRecordsLoader(modelInfo);
+
+    const navigate = useNavigate();
   if (!records) return [];
   if (!loaderOptions) {
     loaderOptions = { pageSize: 25 };
@@ -36,7 +38,6 @@ export const BaseListView: React.FC<ViewRecordProps> = ({
     navigate({ search: params.toString() }, { replace: true });
   };
   if (isFetching) return <ProgressSpinner />;
-
   return (
     <BaseListViewContext.Provider
       value={{
