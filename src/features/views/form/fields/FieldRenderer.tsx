@@ -7,7 +7,7 @@ import { NumberField } from './spec/NumberField.tsx';
 import { DateField } from './spec/DateField.tsx';
 
 const fieldComponents: any = {
-  text: TextField,
+  string: TextField,
   number: NumberField,
   date: DateField,
   checkbox: CheckboxField,
@@ -17,10 +17,10 @@ const fieldComponents: any = {
 };
 
 export const FieldRenderer = ({ field, onChange }: any) => {
-  const FieldComponent = fieldComponents[field.type];
+  const FieldComponent = fieldComponents[field.field_type];
   if (!FieldComponent) return <span>Unsupported field type</span>;
   const getFieldValue = (e: any): any => {
-    if (field.type === 'checkbox') {
+    if (field.field_type === 'checkbox') {
       return e.checked;
     }
     return e.target.value;

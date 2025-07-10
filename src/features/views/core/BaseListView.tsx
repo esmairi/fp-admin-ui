@@ -32,8 +32,9 @@ export const BaseListView: React.FC<ViewRecordProps> = ({
   }
 
   const onRowClick = (id: string) => {
+    if(!view.default_form_id) return null;
     const params = new URLSearchParams();
-    params.set('view_id', view.form_view);
+    params.set('view_id', view.default_form_id);
     params.set('record_id', id);
     navigate({ search: params.toString() }, { replace: true });
   };

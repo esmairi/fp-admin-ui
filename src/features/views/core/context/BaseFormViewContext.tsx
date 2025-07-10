@@ -1,4 +1,4 @@
-import type { RecordData } from '@fastadm/types/ModelInfo.ts';
+import type {ModelData} from '@fastadm/types/ModelInfo.ts';
 import type { BaseViewContextType } from './BaseViewContextType.tsx';
 import React from 'react';
 
@@ -7,7 +7,7 @@ export interface FormLoaderOptions {
 }
 
 export type BaseViewFormContextType = BaseViewContextType & {
-  record: RecordData | undefined;
+  record: ModelData | undefined;
   loaderOptions: FormLoaderOptions | undefined;
   onRowClick?: (id: string) => void;
 };

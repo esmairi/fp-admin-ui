@@ -37,7 +37,7 @@ const ViewSelector: React.FC<Props> = ({ views, model }) => {
       throw new Error(`cant load view`)
     }
 
-  }, [model, viewId, views]);
+  }, [model, viewId, views, recordId]);
   if (!view) return null;
   const updateView = (view: AdminView) => {
     setView(view);

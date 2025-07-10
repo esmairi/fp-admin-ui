@@ -9,5 +9,5 @@ export interface AdminView {
   view_type: string;
   is_main: boolean;
   fields: Field[];
-  form_view: string;
+  default_form_id: string;
 }
